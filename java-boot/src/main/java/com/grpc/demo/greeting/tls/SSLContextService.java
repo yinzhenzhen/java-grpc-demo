@@ -60,7 +60,7 @@ public class SSLContextService {
         kmf.init(keyStore, null);
 
         sslContext = SSLInsts.getSSLContext("TLCPv1.1");
-//        sslContext = SSLInsts.getSSLContext("TLS");
+//        sslContext = SSLInsts.getSSLContext("TLS"); // when http ecc
         sslContext.init(kmf.getKeyManagers(), tmf.getTrustManagers(), new SecureRandom());
         return sslContext;
     }

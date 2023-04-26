@@ -22,7 +22,8 @@ public class HttpClient {
             .setSSLSocketFactory(socketFactory).build();
 
         // Access Servlet /hello over HTTPS scheme.
-        HttpGet getMethod = new HttpGet("https://localhost:50051");
+        HttpGet getMethod = new HttpGet("https://localhost:50051"); // gm
+//        HttpGet getMethod = new HttpGet("https://orderer0.example.com:50051"); // ecc
         CloseableHttpResponse response = client.execute(getMethod);
         client.close();
 
